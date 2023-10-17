@@ -36,14 +36,14 @@ public class UserService {
 		System.out.println("Invalid ID or password. Please try again.");
 		return null;
 	}
-	
+
 	public User checkFailedCount(User user, int failedCount) {
 		if (user.failedCount > 2) {
-			System.out.println("Your account is blocked.");					
+			System.out.println("Your account is blocked.");
 			return null;
-		}		
+		}
 		System.out.println("Invalid ID or password. Please try again.");
-		System.out.println("You have " + (3 - user.failedCount) + " attempt(s) left");				
+		System.out.println("You have " + (3 - user.failedCount) + " attempt(s) left");
 		return null;
 	}
 
@@ -71,6 +71,5 @@ public class UserService {
 				System.out.println("Mentor: " + mentor.getName());
 			}
 		}
-		System.out.println();
 	}
 }
